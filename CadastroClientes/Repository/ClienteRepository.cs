@@ -20,7 +20,7 @@ namespace CadastroClientes.Repository
         {
             return await _context.Clientes.ToListAsync();
         }
-        public async Task<Cliente> ClientesById(int id)
+        public async Task<Cliente> GetClientesById(int id)
         {
             return await _context.Clientes.FirstOrDefaultAsync(c => c.id == id);
         }
@@ -39,7 +39,7 @@ namespace CadastroClientes.Repository
 
             return ClienteAlterado;
         }
-        public async void DeleteCliente(int id)
+        public async Task DeleteCliente(int id)
         {
             var cliente = await _context.Clientes.FirstOrDefaultAsync(c => c.id == id);
 
