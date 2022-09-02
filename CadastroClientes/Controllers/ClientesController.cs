@@ -30,7 +30,7 @@ namespace CadastroClientes.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Cliente>> GetCliente(int id)
         {
-            return await _repository.GetClientesById(id)
+            return await _repository.GetClientesById(id);
         }
 
         // PUT: api/Clientes/5
